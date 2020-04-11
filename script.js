@@ -78,9 +78,7 @@ container.addEventListener('click', e => {
 clearAll.addEventListener('click', e => {
     seat.forEach(selection => {
         selection.classList.remove('selected');
-        localStorage.removeItem('selectedSeat');
-        localStorage.removeItem('ticketPrice');
-        localStorage.removeItem('movieSelector');
+        localStorage.clear();
         seatCount.innerText = '0';
         totalAmount.innerText = '0';
     })
